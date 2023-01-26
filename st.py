@@ -6,13 +6,15 @@ import pandas as pd
 tweets_list = []
 
 st.set_page_config(page_title = "Twitter Scraper", layout = 'wide')
-st.subheader("Twitter Scrapper 🌐")
+st.subheader("Twitter Scrapper")
 st.caption('a project by Ved Reddy')
 
 with st.form(key = 'Twitter_form'):
     search_term = st.text_input('Enter the keyword to search for related tweets')
     limit = st.number_input('How many tweets to scrape?', 50, 5000, step=100)
-    #date_range = st.date_input('Enter the date range:', )
+    st.write('Select the date range to scrape tweets from')
+    #start_date = st.date_input('Enter the start date:', )
+    #end_date = st.date_input('Enter the end date:', ) 
     output = st.radio('Select File Format?', ['csv', 'json'])
     file_name = st.text_input('Name the file:', max_chars=20)
     submit_button = st.form_submit_button(label='Search')

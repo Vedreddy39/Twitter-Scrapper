@@ -14,7 +14,7 @@ st.caption('a project by Ved Reddy')
 with st.form(key = 'Twitter_form'):
     search_term = st.text_input('Enter the keyword to search for related tweets')
     limit = st.number_input('How many tweets to scrape?', 50, 5000, step=100)
-    st.write('Select the date range to scrape tweets from')
+    #st.write('Select the date range to scrape tweets from')
     #start_date = st.date_input('Enter the start date:', )
     #end_date = st.date_input('Enter the end date:', ) 
     output = st.radio('Select File Format?', ['csv', 'json'])
